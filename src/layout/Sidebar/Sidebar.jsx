@@ -1,6 +1,6 @@
 import React from 'react'
 
-import EstructuraLink from '../../components/Links/EstructuraLink'
+import EstructuraLink from '../../components/Estructuras/EstructuraLink'
 import './style.scss'
 
 const Sidebar = () => { 
