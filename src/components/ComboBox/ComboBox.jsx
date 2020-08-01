@@ -10,7 +10,7 @@ const ComboBox = (props) => {
           props.info.map((obj,i)=>
         <option  key={i} value={obj.id}>{obj.description}</option>
         )
-      }
+        }
         </select>
     </div>
   )
