@@ -3,9 +3,14 @@ import './ButtonStyles.scss'
 
 const Button = (props) =>{
   return(
-    <div>
-      <button onClick={props.onClick} className="btn">{props.name}</button>
-    </div>
+    
+    <button 
+    onClick={props.onClick} 
+    className={`btn ${props.className} ${props.className}`}
+    >
+    {props.name}
+    </button>
+    
   )
 }
 

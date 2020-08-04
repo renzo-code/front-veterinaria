@@ -1,29 +1,46 @@
 import React from 'react'
 import Axios from 'axios'
+
 import Tabla from '../../../components/Tablas/Tabla'
+import Button from '../../../components/Button/Button'
+import './configuracionStyle.scss'
+import Editar from'../../../Images/editar.png'
+import Delete from '../../../Images/delete.png'
+import Modal from '../../../components/Modal/Modal'
+import Input from '../../../components/Input/Input'
+
 
   const cabeceraTipoMascota = [
     "Código",
-    "Tipo de Mascota"
+    "Tipo de Mascota",
+    "",
+    ""
   ]
   const cabeceraRaza = [
     "Código",
-    "Tipo de Raza"
+    "Tipo de Raza",
+    "",
+    ""
   ]
   const cabeceraEstado = [
     "Código",
-    "Estado del Paciente"
+    "Estado del Paciente",
+    "",
+    ""
   ]
   const cabeceraDoctor = [
     "Código",
-    "Datos del Doctor"
+    "Datos del Doctor",
+    "",
+    ""
   ]
 class obtenerData extends React.Component{
   state={
     dataTipo: [],
     dataRaza: [],
     dataEstado: [],
-    dataDoctor: []
+    dataDoctor: [],
+    mostrarModal: false
   }
 
   componentDidMount(){
@@ -81,7 +98,7 @@ class obtenerData extends React.Component{
 
   obtenerDoctor = async () =>{
     try{
-      const doctor = await Axios.get('http://localhost:8080/api/v1/doctor')
+      const doctor = await Axios.get(`http://localhost:8080/api/v1/doctor`)
       this.formatearData(doctor,'id_doctor','dataDoctor','nombres_apellidos')
       console.log(doctor,'doc')
     }
@@ -90,14 +107,111 @@ class obtenerData extends React.Component{
     }
   }
 
+  cerrarModal = () =>{
+    this.setState({
+      mostrarModal: false
+    })
+  }
+
+  abrirModal = () =>{
+    this.setState({
+      mostrarModal: true
+    })
+  }
+
   render(){
-    console.log(this.state.dataDoctor,'doctor')
+    // console.log(this.state.dataDoctor,'doctor')
     return(
       <div>
-        <Tabla cabecera={cabeceraTipoMascota} dates={this.state.dataTipo}/>
-        <Tabla cabecera={cabeceraRaza} dates={this.state.dataRaza}/>
-        <Tabla cabecera={cabeceraEstado} dates={this.state.dataEstado}/>
-        <Tabla cabecera={cabeceraDoctor} dates={this.state.dataDoctor}/>
+        <div className="tablas-configuracion">
+          <div className="items-configuracion">
+            <div>
+              <Button onClick={this.abrirModal} className="config" name="Crear"/>
+              <Tabla cabecera={cabeceraTipoMascota} dates={this.state.dataTipo}>
+                {
+                  this.state.dataTipo.map((item,i)=>{
+                    return(
+                      <tr key={i}>
+                        <td className="item-tabla"> {item.id} </td>
+                        <td className="item-tabla"> {item.description} </td>
+                        <td className="item-tabla"> <img className="img" src={Editar} alt=""/> </td>
+                        <td className="item-tabla"> <img className="img" src={Delete} alt=""/> </td>
+                      </tr>
+                    )
+                  })
+                }
+              </Tabla>
+              <Modal
+                className="middle" 
+                show={this.state.mostrarModal} 
+                onClose={this.cerrarModal}
+                nameButton="Guardar"
+              >
+                {
+                  <div>
+                    <h2 className="form-title">CREAR TIPO </h2>
+                    <div className="form-input">
+                      <Input placeholder="Escribir aquí ..." titleInput="Tipo de Mascota :"/>
+                    </div>
+                  </div>
+                }
+              </Modal>
+            </div>
+            <div>
+              <Button className="config" name="Crear"/>
+              <Tabla cabecera={cabeceraRaza} dates={this.state.dataRaza}>
+                {
+                  this.state.dataRaza.map((item,i)=>{
+                    return(
+                      <tr key={i}>
+                        <td className="item-tabla"> {item.id} </td>
+                        <td className="item-tabla"> {item.description} </td>
+                        <td className="item-tabla"> <img className="img" src={Editar} alt=""/> </td>
+                        <td className="item-tabla"> <img className="img" src={Delete} alt=""/> </td>
+                      </tr>
+                    )
+                  })
+                }
+              </Tabla>
+            </div>
+          </div>
+          <div className="items-configuracion">
+            <div>
+              <Button className="config" name="Crear"/>
+              <Tabla cabecera={cabeceraEstado} dates={this.state.dataEstado}>
+                {
+                  this.state.dataEstado.map((item,i)=>{
+                    return(
+                      <tr key={i}>
+                        <td className="item-tabla"> {item.id} </td>
+                        <td className="item-tabla"> {item.description} </td>
+                        <td className="item-tabla"> <img className="img" src={Editar} alt=""/> </td>
+                        <td className="item-tabla"> <img className="img" src={Delete} alt=""/> </td>
+                      </tr>
+                    )
+                  })
+                }
+              </Tabla>
+            </div>
+            <div>
+              <Button className="config" name="Crear"/>
+              <Tabla cabecera={cabeceraDoctor} dates={this.state.dataDoctor}>
+                {
+                  this.state.dataDoctor.map((item,i)=>{
+                    return(
+                      <tr key={i}>
+                        <td className="item-tabla"> {item.id} </td>
+                        <td className="item-tabla"> {item.description} </td>
+                        <td className="item-tabla"> <img className="img" src={Editar} alt=""/> </td>
+                        <td className="item-tabla"> <img className="img" src={Delete} alt=""/> </td>
+                      </tr>
+                    )
+                  })
+                }
+              </Tabla>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -14,7 +14,7 @@ const Tabla = (props) => {
         </tr>
       </thead>
       <tbody>
-          {
+          {/* {
             props.dates.map((obj,i)=>{
               return(
                 <tr key={i}>
@@ -23,7 +23,8 @@ const Tabla = (props) => {
                 </tr>
               )
             })
-          }
+          } */}
+          {props.children}
         </tbody>
     </table>
   )

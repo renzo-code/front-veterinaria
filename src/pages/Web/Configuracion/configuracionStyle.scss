@@ -1,0 +1,31 @@
+.items-configuracion{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+.item-tabla{
+  text-align: center;
+  background-color: white;
+  font-size: 18px;
+  height: 30px;
+  color: #696158;
+}
+
+.img{
+  height: 33px;
+  padding-left: 8px;
+  cursor: pointer;
+}
+// .form-tipo{
+//   display: flex;
+// }
+.form-title{
+  color: #3EAA91;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.form-input{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}

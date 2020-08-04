@@ -4,9 +4,20 @@
   font-size: 18px;
   border-radius: 6px;
   border: none;
-  cursor: pointer;
   outline: none;
   color: #FFFFFF;
   background-color: #FC5430;
   font-family: 'Roboto', sans-serif;
+  transition: 0.5s;
+  cursor: pointer;
+  
+}
+
+.config{
+  height: 30px;
+}
+.cancel{
+  background-color: white;
+  color: #FC5430;
+  border: 2px #FC5430 solid;
 }
