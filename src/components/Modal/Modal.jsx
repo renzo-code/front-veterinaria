@@ -11,7 +11,8 @@ const Modal = ({
   onClick,
   nameButton,
   hideButtonCancel = false,
-  className
+  className,
+  disabled,
 }) => {
   const refModal = useRef();
 
@@ -44,9 +45,18 @@ const Modal = ({
         {children}
         <div className="footer-modal">
           {!hideButtonCancel && (
-            <Button name="Cancelar" className="cancel" onClick={onClose} />
+            <Button
+              disabled={disabled}
+              name="Cancelar"
+              className="cancel"
+              onClick={onClose}
+            />
           )}
-          <Button name={nameButton} onClick={onClick} />
+          <Button
+            disabled={disabled}
+            name={nameButton}
+            onClick={onClick}
+          />
         </div>
       </div>
     </div>

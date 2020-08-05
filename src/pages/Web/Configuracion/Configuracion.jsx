@@ -9,7 +9,6 @@ import Delete from '../../../Images/delete.png'
 import Modal from '../../../components/Modal/Modal'
 import Input from '../../../components/Input/Input'
 
-
   const cabeceraTipoMascota = [
     "Código",
     "Tipo de Mascota",
@@ -40,7 +39,8 @@ class obtenerData extends React.Component{
     dataRaza: [],
     dataEstado: [],
     dataDoctor: [],
-    mostrarModal: false
+    mostrarModal: false,
+    tipo: ''
   }
 
   componentDidMount(){
@@ -119,8 +119,43 @@ class obtenerData extends React.Component{
     })
   }
 
+  inputChange = (e) =>{
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+    console.log()
+  }
+
+  crearDatosTipo = async () =>{
+    // console.log(e.target.value, 'event')
+    try{
+      const nuevoTipo = {
+        "tipo": this.state.tipo
+      }
+      const datosAlServicio = await Axios.post('http://localhost:8080/api/v1/tipo', nuevoTipo)
+      console.log(datosAlServicio, 'datos')
+    }
+    catch(e){
+      console.error(e);
+    }
+    this.cerrarModal()
+    this.obtenerTipo()
+  }
+
+  eliminarTipo = async (id) =>{
+    try{
+      const deleteTipo = await Axios.delete(`http://localhost:8080/api/v1/tipo/${id}` )
+      console.log(deleteTipo, 'delete tipo')
+      
+    }
+    catch(e){
+      console.error(e);
+    }
+    this.obtenerTipo()
+  }
+
   render(){
-    // console.log(this.state.dataDoctor,'doctor')
+    // console.log(this.state.tipo,'tipo')
     return(
       <div>
         <div className="tablas-configuracion">
@@ -135,7 +170,7 @@ class obtenerData extends React.Component{
                         <td className="item-tabla"> {item.id} </td>
                         <td className="item-tabla"> {item.description} </td>
                         <td className="item-tabla"> <img className="img" src={Editar} alt=""/> </td>
-                        <td className="item-tabla"> <img className="img" src={Delete} alt=""/> </td>
+                        <td className="item-tabla" onClick={() => this.eliminarTipo(item.id)}> <img className="img" src={Delete} alt=""/> </td>
                       </tr>
                     )
                   })
@@ -146,12 +181,19 @@ class obtenerData extends React.Component{
                 show={this.state.mostrarModal} 
                 onClose={this.cerrarModal}
                 nameButton="Guardar"
+                onClick={this.crearDatosTipo}
               >
                 {
                   <div>
                     <h2 className="form-title">CREAR TIPO </h2>
                     <div className="form-input">
-                      <Input placeholder="Escribir aquí ..." titleInput="Tipo de Mascota :"/>
+                      <Input 
+                        onChange={this.inputChange} 
+                        placeholder="Escribir aquí ..." 
+                        titleInput="Tipo de Mascota :"
+                        value={this.state.tipo}
+                        name="tipo"
+                      />
                     </div>
                   </div>
                 }
