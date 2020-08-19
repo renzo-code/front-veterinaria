@@ -1,0 +1,74 @@
+.font-master{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.font-afiches{
+  width: 350px;
+  height: auto;
+  background-color: #F2F2F2;
+  text-align: center;
+  margin-right: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.font-llamada{
+  color: white;
+  width: 85px;
+  height: 85px;
+  background-color: #2D7FF9;
+  border-radius: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.font-ubicacion{
+  color: white;
+  background-color: #FCB400;
+  border-radius: 90px;
+  font-size: 45px;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.font-tiempo{
+  color: white;
+  background-color: #F82B60;
+  border-radius: 90px;
+  font-size: 40px;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+.font-text{
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+.font-parrafo{
+  font-family: 'Open Sans' , sans-serif;
+  padding-bottom: 40px;
+}

@@ -1,0 +1,125 @@
+.image-fondo{
+  width: 100%;
+  background-image: url("https://veterinariarondon.com/wp-content/uploads/2018/12/eduardo-rondon-veterinario-lima.jpg");
+  background-position: fixed;
+  height: 657px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(.2);
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background: rgba(0,0,0,0.6);
+  // }
+  &.h1{
+    font-size: 60px;
+    color: #fff;
+    position: relative;
+  }
+}
+.image-title{
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+}
+.title-hora{
+  font-family: 'Poppins', sans-serif;
+  font-size: 58px;
+  letter-spacing: 7px;
+}
+.btn-conocenos{
+  margin-top: 70px;
+  transition: 0.4s;
+  &:hover{
+    height: 55px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.quienes-somos{
+  display: flex;
+  // padding: 100px 0;
+  padding: 100px 10%;
+  background-color: #F2F2F2;
+}
+.container{
+  padding-right: 50px;
+  padding-top: 30px;
+}
+.body-title{
+  color: #3EAA91;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 50px 0 30px 0;
+  letter-spacing: 1px;
+}
+.body-parrafo{
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.body-imagen {
+  width: 660px;
+  height: 500px;
+}
+.master-servicios{
+  padding: 100px 0 0 0;
+}
+.title-servicios{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  color: #3EAA91;
+}
+.separador{
+  border-top: solid 8px #E15B3E;
+  height: 2px;
+  padding: 0;
+  margin: 10px auto 0 auto;
+  width: 130px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.blocks{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.master-familia{
+  background-color: #8956C4;
+
+}
+.title-familia{
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 70px;
+  padding-top: 70px;
+  &::after{
+    display: block;
+    content: "";
+    width: 180px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #3EAA91;
+    margin: auto;
+  }
+}
+.cards{
+  display: flex;
+  justify-content: center;
+}

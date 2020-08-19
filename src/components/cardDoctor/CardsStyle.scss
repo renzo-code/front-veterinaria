@@ -1,0 +1,64 @@
+.master-cards{
+  display: block;
+  width: 500px;
+  height: 630px;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-right: 30px;
+}
+.name-Card{
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  
+}
+.image-cards{
+  margin-bottom: 10px;
+}
+.subTitle-Card{
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #666666;
+  &::after{
+    content: '';
+    background-color: #E15B3E;
+    height: 6px;
+    width: 100px;
+    display: block;
+    border-radius: 5px;
+    margin: auto;
+  }
+}
+.parrafo-Card{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-top: 10px;
+  
+}
+
+.fonts-master{
+  display: flex;
+  justify-content: center;
+}
+.fonts{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  &:hover{
+    color: white;
+    background-color: #3EAA91;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}

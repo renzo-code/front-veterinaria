@@ -21,7 +21,8 @@ const Modal = ({
       refModal.current.style.display = "block";
     } else {
       refModal.current.style.display = "none";
-      onClose();
+      // eslint-disable-next-line no-unused-expressions
+      onClose
     }
   }, [show, onClose]);
 
@@ -35,7 +36,8 @@ const Modal = ({
   const hiddenModalIf = e => {
     if (e.target === refModal.current) {
       refModal.current.style.display = "none";
-      onClose();
+      // eslint-disable-next-line no-unused-expressions
+      onClose
     }
   };
 

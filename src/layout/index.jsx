@@ -9,7 +9,7 @@ import './style.scss'
 const Layout = (props) => {
   return (
     <>
-      <Header />
+    <Header />
       <div className="l-content">
         <Sidebar />
         <div className="l-body">

@@ -5,14 +5,22 @@ const ComboBox = (props) => {
   return (
     <div>
       <p className="title-box">{props.title}</p>
-      <select onChange={props.onChange} className="combo-box" name="" id="">
+      <select
+        value={props.value}
+        defaultValue={props.value}
+        onChange={props.onChange}
+        className="combo-box"
+        name={props.name}
+        id=""
+      >
         {
-          props.info.map((obj,i)=>
-        <option  key={i} value={obj.id}>{obj.description}</option>
-        )
+          [{id: 0, description: props.placeholder}, ...props.info].map((obj,i) =>
+            <option hidden={i === 0}  key={i} value={obj.id}>{obj.description}</option>
+          )
         }
-        </select>
+      </select>
     </div>
   )
 }
+
 export default ComboBox

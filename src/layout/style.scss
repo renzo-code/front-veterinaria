@@ -1,9 +1,12 @@
 .l-content {
   display: flex;
   height: calc(100vh - 80px);
+  
 }
 
 .l-body {
   // background-color: skyblue;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
