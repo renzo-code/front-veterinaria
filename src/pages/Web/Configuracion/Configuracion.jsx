@@ -224,7 +224,7 @@ class obtenerData extends React.Component{
     }
     this.obtenerEstado()
   }
-  
+
   crearDoctor = async () => {
     // console.log(this.state.dataTipo,'qwe')
     try{

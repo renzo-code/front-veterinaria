@@ -1,0 +1,66 @@
+.footer-master{
+  
+}
+.redes-sociales-icon{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.red-social{
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  border-radius: 90px;
+  background-color: white;
+  color: #E15B3E;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    color: white;
+    background-color: #3EAA91;
+    transition: 0.4s;
+  }
+}
+.icons{
+  color: #6E6565;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+}
+.master-info{
+  display: flex;
+}
+.parrafo-info{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding-right: 10px;
+  font-weight: 100;
+  color: #6E6565;
+}
+.parrafo-footer{
+  font-family: 'Open Sans',sans-serif;
+  display: flex;
+  font-weight: 100;
+  font-size: 14px;
+  color: #6E6565;
+  padding-bottom: 8%;
+  align-items: center;
+  justify-content: center;
+}
+.container-info{
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.rn{
+  color: #7F4CBA;
+  font-weight: bold;
+  
+}

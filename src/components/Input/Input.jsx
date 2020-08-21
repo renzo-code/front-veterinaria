@@ -6,7 +6,7 @@ const Input = (props) =>{
     <div>
       <p className="title">{props.titleInput}</p>
       <input 
-        className="input"
+        className={`input ${props.className}`}
         type="text"
         placeholder={props.placeholder}
         onChange={props.onChange}

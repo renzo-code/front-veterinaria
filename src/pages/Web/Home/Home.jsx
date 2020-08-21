@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './HomeStyle.scss'
+import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'
 import Blockes from '../../../components/Blockes/Blockes'
 import Cards from '../../../components/cardDoctor/Cards'
@@ -116,6 +117,17 @@ class Home extends React.Component{
         </iframe>
       <div>
         <Afiches/>
+      </div>
+      <div>
+        <div className="footer-master">
+          <div className="footer-title">
+          <img className="footer-img" src="https://veterinariarondon.com/wp-content/uploads/2018/12/rodrigo-rondon-herz.png" alt=""/>
+          <h1>La lealtad te hace familia.</h1>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
     )
