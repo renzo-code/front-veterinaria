@@ -9,16 +9,42 @@
   font-size: 18px;
   height: 30px;
   color: #696158;
+  padding-bottom: 3px;
 }
 
-.img{
-  height: 33px;
-  padding-left: 8px;
+.img-borrar{
+  height: 35px;
+  margin: 3px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 0 6px;
+  &:hover{
+    color: white;
+    background-color: red;
+    transition: 0.4s;
+  }
 }
-// .form-tipo{
-//   display: flex;
-// }
+.img-editar{
+  height: 35px;
+  margin: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 0 6px;
+  &:hover{
+    color: white;
+    background-color: #3EAA91;
+    transition: 0.4s;
+  }
+}
+
 .form-title{
   color: #3EAA91;
   text-align: center;

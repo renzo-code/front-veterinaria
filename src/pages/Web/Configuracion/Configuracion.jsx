@@ -8,6 +8,11 @@ import Editar from'../../../Images/editar.png'
 import Delete from '../../../Images/delete.png'
 import Modal from '../../../components/Modal/Modal'
 import Input from '../../../components/Input/Input'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faPhone, faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF} from '@fortawesome/free-brands-svg-icons'
+
+
 
   const cabeceraTipoMascota = [
     "Código",
@@ -370,19 +375,24 @@ class obtenerData extends React.Component{
                   this.state.dataTipo.map((item,i)=>{
                     return(
                       <tr key={i}>
-                        <td className="item-tabla"> {item.id} </td>
+                        <td className="item-tabla"> {item.id} </td> 
+                        
                         <td className="item-tabla"> {item.description} </td>
                         <td
                           className="item-tabla"
                           onClick={() => this.mostrarEditarTipo(item)}
                         >
-                          <img className="img" src={Editar} alt=""/>
+                          <div className="img-editar" >
+                            <FontAwesomeIcon icon={faEdit}/>
+                          </div>
                         </td>
                         <td
                           className="item-tabla"
                           onClick={() => this.eliminarTipo(item.id)}
                         >
-                          <img className="img" src={Delete} alt=""/>
+                          <div className="img-borrar">
+                            <FontAwesomeIcon icon={faTrashAlt}/>
+                          </div>
                         </td>
                       </tr>
                     )
@@ -448,12 +458,16 @@ class obtenerData extends React.Component{
                         <td className="item-tabla" 
                           onClick={() => this.mostrarEditarRaza(item)}
                         >
-                          <img className="img" src={Editar} alt=""/> 
+                          <div className="img-editar" >
+                            <FontAwesomeIcon icon={faEdit}/>
+                          </div>
                         </td>
                         <td className="item-tabla" 
                           onClick={() => this.eliminarRaza(item.id)}
                         >
-                          <img className="img" src={Delete} alt=""/> 
+                          <div className="img-borrar">
+                            <FontAwesomeIcon icon={faTrashAlt}/>
+                          </div>
                         </td>
                       </tr>
                     )
@@ -521,12 +535,16 @@ class obtenerData extends React.Component{
                         <td className="item-tabla"
                           onClick={()=>this.mostrarEditarEstado(item)}
                         > 
-                          <img className="img" src={Editar} alt=""/> 
+                          <div className="img-editar" >
+                            <FontAwesomeIcon icon={faEdit}/>
+                          </div>
                         </td>
                         <td className="item-tabla" 
                           onClick={() => this.eliminarEstado(item.id)} 
                         > 
-                          <img className="img" src={Delete} alt=""/> 
+                          <div className="img-borrar">
+                            <FontAwesomeIcon icon={faTrashAlt}/>
+                          </div>
                         </td>
                       </tr>
                     )
@@ -590,12 +608,16 @@ class obtenerData extends React.Component{
                         <td className="item-tabla"
                           onClick={()=>this.mostrarEditarDoctor(item)}
                         > 
-                          <img className="img" src={Editar} alt=""/>
+                          <div className="img-editar" >
+                            <FontAwesomeIcon icon={faEdit}/>
+                          </div>
                         </td>
                         <td className="item-tabla" 
                           onClick={() => this.eliminarDoctor(item.id)} 
                         > 
-                          <img className="img" src={Delete} alt=""/> 
+                          <div className="img-borrar">
+                            <FontAwesomeIcon icon={faTrashAlt}/>
+                          </div> 
                         </td>
                       </tr>
                     )

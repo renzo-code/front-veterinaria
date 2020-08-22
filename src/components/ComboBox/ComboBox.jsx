@@ -3,13 +3,13 @@ import './ComboStyle.scss'
 
 const ComboBox = (props) => {
   return (
-    <div>
+    <div className="conboBox-master">
       <p className="title-box">{props.title}</p>
       <select
         value={props.value}
         defaultValue={props.value}
         onChange={props.onChange}
-        className="combo-box"
+        className={`combo-box ${props.className}` }
         name={props.name}
         id=""
       >

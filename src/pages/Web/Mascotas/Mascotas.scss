@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-around;
 }
+.container-form{
+
+}
+
 .form-duenio{
   color: #3EAA91;
   font-family: 'Roboto', sans-serif;
@@ -9,4 +13,23 @@
 }
 .input-duenio{
   margin: 30px 90px;
+}
+.btn-duenio{
+  margin-bottom: 15px;
+}
+.registrar-mascota{
+  color: #3EAA91;
+  font-family: 'Poppins',sans-serif;
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.container-btn-form{
+  margin-top: 15px;
+}
+.btn-limpiar{
+  margin-right: 25px;
+}
+.btn-registrar-mascota{
+  margin-left: 25px;
 }

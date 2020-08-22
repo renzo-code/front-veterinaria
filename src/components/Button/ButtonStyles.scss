@@ -9,6 +9,9 @@
   background-color: #FC5430;
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+  }
 }
 .config{
   height: 30px;
@@ -17,7 +20,4 @@
   background-color: white;
   color: #FC5430;
   border: 2px #FC5430 solid;
-}
-.btn-duenio{
-  
 }

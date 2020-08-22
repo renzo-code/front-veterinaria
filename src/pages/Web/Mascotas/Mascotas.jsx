@@ -165,9 +165,13 @@ crearMascota = async () =>{
     return(
       <div>
       <div className="form-registro">
-        <div>
-          <Button className="btn-duenio" onClick={() => this.abrirModal('estadoModalDuenio')} name="Registar Dueño"/>
-          <h2>REGISTRAR MASCOTA</h2>
+        <div className="container-form">
+          <Button 
+            className="btn-duenio" 
+            onClick={() => this.abrirModal('estadoModalDuenio')} 
+            name="Registar Dueño"
+          />
+          <h2 className="registrar-mascota">REGISTRAR MASCOTA</h2>
           <Input
             placeholder="Nombre de la Mascota"
             titleInput="Complete datos de la Mascota :"
@@ -175,13 +179,14 @@ crearMascota = async () =>{
             name="nombreMascota"
             value={this.state.nombreMascota}
           />
-          <ComboBox 
+          <ComboBox
             name="selectedTipo"
             placeholder="Seleccionar tipo"
             onChange={this.inputChange} 
             info={this.state.servicioTipo}
             title="Escoja un tipo de Mascota"
             value={this.state.selectedTipo}
+            
           />
           <ComboBox
             name="selectedRaza"
@@ -190,6 +195,7 @@ crearMascota = async () =>{
             info={this.state.servicioRaza}
             title="Escoja una Raza"
             value={this.state.selectedRaza}
+            
           />
           <ComboBox
             name="selectedDuenio"
@@ -198,9 +204,19 @@ crearMascota = async () =>{
             info={this.state.servicioDuenio}
             title="Elija Dueño"
             value={this.state.selectedDuenio}
+            
           />
-          <Button name="Cancelar"/>
-          <Button onClick={this.crearMascota} name="Registrar Mascota"/>
+          <div className="container-btn-form">
+            <Button 
+              className="btn-limpiar" 
+              name="Limpiar"
+            />
+            <Button 
+              className="btn-registrar-mascota" 
+              onClick={this.crearMascota} 
+              name="Registrar Mascota"
+            />
+          </div>
         </div>
           <Modal
             className="middle"
