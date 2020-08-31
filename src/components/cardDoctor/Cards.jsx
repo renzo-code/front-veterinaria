@@ -1,7 +1,6 @@
 import React from 'react'
 import './CardsStyle.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF,faTwitter, faInstagram,} from '@fortawesome/free-brands-svg-icons'
 
 

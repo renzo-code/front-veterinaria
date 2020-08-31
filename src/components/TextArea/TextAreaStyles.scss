@@ -17,10 +17,9 @@
   border-radius: 8px;
   color: #959089;
   font-family: 'Roboto', sans-serif;
-  
+  background-color: #EBEDEE;
   &:focus{
     border: 3px solid #B5B5B5;
-    
     transition: 0.5s;
   }
 }

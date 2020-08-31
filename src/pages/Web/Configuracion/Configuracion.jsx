@@ -4,15 +4,11 @@ import Axios from 'axios'
 import Tabla from '../../../components/Tablas/Tabla'
 import Button from '../../../components/Button/Button'
 import './configuracionStyle.scss'
-import Editar from'../../../Images/editar.png'
-import Delete from '../../../Images/delete.png'
 import Modal from '../../../components/Modal/Modal'
 import Input from '../../../components/Input/Input'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faPhone, faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF} from '@fortawesome/free-brands-svg-icons'
-
-
+import { faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+// import { faFacebookF} from '@fortawesome/free-brands-svg-icons'
 
   const cabeceraTipoMascota = [
     "Código",
@@ -71,6 +67,7 @@ class obtenerData extends React.Component{
       const tipo = await Axios.get('http://localhost:8080/api/v1/tipo')
       // console.log(tipo.data.reply,'resp')
       this.formatearData(tipo,'id_tipo','dataTipo')
+
     }
     catch(e){
       console.error(e)
@@ -326,7 +323,7 @@ class obtenerData extends React.Component{
     this.cerrarModal('editarModalEstado')
     this.obtenerEstado()
   }
-  
+
   mostrarEditarDoctor = (itemDoctor) => {
     this.setState({
       itemEditar : itemDoctor
@@ -369,7 +366,11 @@ class obtenerData extends React.Component{
         <div>
           <div className="items-configuracion">
             <div>
-              <Button onClick={()=>this.abrirModal('mostrarModalTipo')} className="config" name="Crear"/>
+              <Button 
+                onClick={()=>this.abrirModal('mostrarModalTipo')} 
+                className="config" 
+                name="Crear"
+              />
               <Tabla cabecera={cabeceraTipoMascota} dates={this.state.dataTipo}>
                 {
                   this.state.dataTipo.map((item,i)=>{

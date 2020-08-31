@@ -1,8 +1,8 @@
 import React from 'react'
 import './AfichesStyle.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faPhone, faMapMarkedAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import { faFacebookF,faTwitter, faInstagram,} from '@fortawesome/free-brands-svg-icons'
+import { faPhone, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+// import {} from '@fortawesome/free-brands-svg-icons'
 
 const Afiches = () => {
   return(

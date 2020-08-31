@@ -91,6 +91,7 @@ class Contacto extends React.Component{
               name="datosTextArea"
               value={this.state.datosTextArea}
               onChange={this.inputChange}
+              title="Tú mensaje*"
             />
           </div>
         <div className="btn-enviar-msj">

@@ -9,7 +9,7 @@ const ComboBox = (props) => {
         value={props.value}
         defaultValue={props.value}
         onChange={props.onChange}
-        className={`combo-box ${props.className}` }
+        className={`combo-box ${props.className}` } 
         name={props.name}
         id=""
       >

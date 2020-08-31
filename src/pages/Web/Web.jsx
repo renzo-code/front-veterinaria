@@ -8,6 +8,8 @@ import Mascotas from './Mascotas/Mascotas'
 import Historial from './Historial/Historial'
 import Configuracion from './Configuracion/Configuracion'
 import Contacto from './Contacto/Contacto'
+import Citas from './Citas/Citas'
+import DetalleHistorial from './DetalleHistorial/DetalleHistorial'
 
 const Pages = () => {
   return (
@@ -21,9 +23,12 @@ const Pages = () => {
         <Route path="/home" component={Home} />
         <Route path="/otros" component={Otros} />
         <Route path="/mascota" component={Mascotas} />
+        <Route path="/historial/detalle/:id" component={DetalleHistorial}/>
         <Route path="/historial" component={Historial}/>
         <Route path="/configuracion" component={Configuracion}/>
         <Route path="/contacto" component={Contacto}/>
+        <Route path="/citas" component={Citas}/>
+        
       </Switch>
     </Layout>
   )

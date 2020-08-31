@@ -11,6 +11,7 @@ const Sidebar = () => {
       <EstructuraLink to="/historial" name="Historial"/> 
       <EstructuraLink to="/configuracion" name="Configuración"/>
       <EstructuraLink to="/contacto" name="Contacto"/>
+      <EstructuraLink to="/citas" name="Citas " />
     </div>
     )
   }

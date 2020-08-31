@@ -19,12 +19,14 @@ class Mascotas extends React.Component {
     dni : '',
     telefono : '',
     direccion : '',
-    
+
     nombreMascota : '',
     servicioMascota: [],
     selectedTipo : 0,
     selectedRaza : 0,
     selectedDuenio : 0,
+
+    
   }
 
 componentDidMount(){
@@ -118,7 +120,7 @@ componentDidMount(){
       console.error(e)
     }
   }
-  
+
 crearMascota = async () =>{
   try{
     const nuevaMascota = {

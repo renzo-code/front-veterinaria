@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './HomeStyle.scss'
 import Footer from '../../../components/Footer/Footer'
 import Button from '../../../components/Button/Button'

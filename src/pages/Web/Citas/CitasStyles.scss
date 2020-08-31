@@ -1,0 +1,95 @@
+.title-cita{
+  font-family: 'Poppins',sans-serif;
+  color: #3EAA91;
+}
+.titulo-fecha-salida{
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  color: #696158;
+  font-size: 16px;
+  padding-bottom: 3px;
+  padding-top: 20px;
+}
+.fecha-salida{
+  color: #9D9994;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+.formn-citas{
+  width: 210px;
+  margin: auto;
+}
+.text-area-cita{
+  display: flex;
+  justify-content: center;
+}
+.form-cita-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  
+}
+.btn-crear-cita{
+  margin-right: 20px;
+}
+.item-table{
+  text-align: center;
+  font-family: 'Roboto',sans-serif;
+  font-size: 18px;
+  color: #696158;
+}
+.observacion-style{
+  font-size: 25px;
+  padding-left: 6px;
+  color: #696158;
+  &:hover{
+    cursor: pointer;
+    color: #3EAA91;
+    transition: 0.5s;
+  }
+}
+.tabla-master{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.obs-modal{
+  font-family: 'Roboto',sans-serif;
+  padding: 20px 10px;
+  color: #696158;
+  font-size: 20px;
+}
+.btn-editar-citas{
+  cursor: pointer;
+  color: #696158;
+  font-size: 22px;
+  &:hover{
+    color: #3EAA91;
+    transition: 0.5s;
+  }
+}
+.fecha-edit-title{
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  color: #696158;
+  font-size: 16px;
+  padding-bottom: 3px;
+  padding-top: 10px;
+}
+.combo-estado-editar{
+  margin-bottom: 15px;
+}
+.title-edit-cita{
+  font-family: 'Poppins',sans-serif;
+  color: #3EAA91;
+  display: flex;
+  justify-content: center;
+  
+}
+.textarea-editar-cita{
+  width: 420px;
+  height: 130px;
+  margin-bottom: 20px;
+}
