@@ -10,3 +10,14 @@
   margin-left: 50px;
   margin: auto;
 }
+
+@media (max-width : 650px) {
+  .master-estructura{
+    width: 370px;
+    height: 320px;
+  }
+  .sub-master-estructura{
+    width: 370px;
+    height: 170px;
+  }
+}

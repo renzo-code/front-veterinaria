@@ -72,3 +72,22 @@
   display: flex;
   justify-content: center; 
 }
+
+
+
+@media (max-width : 650px) {
+  .title-Form{
+    font-size: 40px;
+  }
+  .sub-title-form{
+    width: 400px;
+    margin: auto;
+  }
+  .form-input-master{
+    display: block;
+    width: 400px;
+    height: 250px;
+    margin-bottom: 25px;
+    
+  }
+}

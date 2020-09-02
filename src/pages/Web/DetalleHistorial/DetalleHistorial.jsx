@@ -27,6 +27,8 @@ class DetalleHistorial extends React.Component {
     }
   }
   
+
+
   render(){
     console.log('props',this.state.dataDetalleHistorial.id_cita)
     return(
@@ -100,6 +102,7 @@ class DetalleHistorial extends React.Component {
             detalle={this.state.dataDetalleHistorial.fecharegistromascota}
           />
         </div>
+        
       </div>
     )
   }

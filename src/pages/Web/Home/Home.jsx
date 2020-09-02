@@ -15,7 +15,7 @@ class Home extends React.Component{
 
   render() {
     return(
-    <div>
+    <div className="master-home">
       <div className="image-fondo">
         <div className="image-title">
           <h1>EMERGENCIAS</h1>
@@ -25,7 +25,7 @@ class Home extends React.Component{
       </div>
       <div className="quienes-somos">
         <div className="container">
-          <h1 className="body-title">QUIÉNES SOMOS</h1>
+          <h1 className="title-servicios">QUIÉNES SOMOS</h1>
           <p className="body-parrafo">
             Somos la clínica veterinaria número 1 de todo el Perú, tenemos más de 50 años dedicados al cuidado y 
             atención de las mascotas.
@@ -114,14 +114,14 @@ class Home extends React.Component{
           title="s"
           >
         </iframe>
-      <div>
+      <div className="afiches-master">
         <Afiches/>
       </div>
       <div>
         <div className="footer-master">
           <div className="footer-title">
           <img className="footer-img" src="https://veterinariarondon.com/wp-content/uploads/2018/12/rodrigo-rondon-herz.png" alt=""/>
-          <h1>La lealtad te hace familia.</h1>
+          <h1 className="title-la-lealtad">La lealtad te hace familia.</h1>
           </div>
         </div>
       </div>

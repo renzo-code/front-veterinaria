@@ -72,3 +72,21 @@
   font-family: 'Open Sans' , sans-serif;
   padding-bottom: 40px;
 }
+
+
+
+
+
+@media (max-width: 650px) {
+  .font-master{
+    display: block;
+    
+  }
+  .font-afiches{
+    margin: auto;
+    
+  }
+  .font-llamada{
+    // padding-top: 10px;
+  }
+}

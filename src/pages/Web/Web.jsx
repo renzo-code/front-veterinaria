@@ -10,6 +10,8 @@ import Configuracion from './Configuracion/Configuracion'
 import Contacto from './Contacto/Contacto'
 import Citas from './Citas/Citas'
 import DetalleHistorial from './DetalleHistorial/DetalleHistorial'
+import DetalleCita from './DetalleCita/DetalleCita'
+
 
 const Pages = () => {
   return (
@@ -19,7 +21,7 @@ const Pages = () => {
           exact
           path="/"
           render={() => <Redirect to="/home" />}
-        />
+        />  
         <Route path="/home" component={Home} />
         <Route path="/otros" component={Otros} />
         <Route path="/mascota" component={Mascotas} />
@@ -27,8 +29,8 @@ const Pages = () => {
         <Route path="/historial" component={Historial}/>
         <Route path="/configuracion" component={Configuracion}/>
         <Route path="/contacto" component={Contacto}/>
+        <Route path="/citas/detalle/:id" component={DetalleCita}/>
         <Route path="/citas" component={Citas}/>
-        
       </Switch>
     </Layout>
   )

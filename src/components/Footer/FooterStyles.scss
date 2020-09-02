@@ -30,6 +30,7 @@
   justify-content: center;
   width: 25px;
   height: 25px;
+  align-items: center;
 }
 .master-info{
   display: flex;
@@ -62,5 +63,24 @@
 .rn{
   color: #7F4CBA;
   font-weight: bold;
-  
+}
+
+
+@media (max-width : 650px){
+  .master-info{
+    // display: block;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  .container-info{
+    display: block;
+    width: 200px;
+    margin: auto;
+  }
+  .parrafo-footer{
+    padding-top: 10px;
+    font-size: 13px;
+  }
 }

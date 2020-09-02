@@ -6,6 +6,7 @@ import Axios from 'axios'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClipboard} from '@fortawesome/free-solid-svg-icons'
+import Modal from '../../../components/Modal/Modal'
 
 const cabeceraHistorial = [ 
     "Nº",
@@ -24,6 +25,8 @@ const cabeceraHistorial = [
 class Historial extends React.Component{
   state={
     dataHistorial : [],
+    estadoModal : false,
+    itemObtenido : '',
   }
 
 componentDidMount(){
@@ -46,20 +49,40 @@ componentDidMount(){
     this.props.history.push(`/historial/detalle/${item.id_cita}`)
   }
 
+  abrirModal = () => {
+    this.setState({
+      estadoModal : true
+    })
+  }
+
+  cerrarModal = () => {
+    this.setState({
+      estadoModal : false
+    })
+  }
+
+  obtenerItem = (item) => {
+    this.setState({
+      itemObtenido : item
+    }) 
+    this.abrirModal()
+  }
+
   render(){
     console.log('this.props', this.props)
     return(
     <div>
       <div className="historial-master">
-        <h1 className="title-cita">HISTORIAL DE SERVICIOS </h1>
+        <h1 className="title-cita-historial">HISTORIAL DE SERVICIOS </h1>
       </div>
-      <div className="tabla-master">
+      <div className="tabla-master medida">
         <Tabla
           cabecera={cabeceraHistorial}
           dates={this.state.dataHistorial}
         >
           {
             this.state.dataHistorial.map((item,i)=>{
+              console.log('item',item)
               return(
                 <tr key={i}>
                   <td className="item-table">{item.id_cita}</td>
@@ -77,7 +100,10 @@ componentDidMount(){
                   <td className="item-table">{item.hora_salida}</td>
                   <td className="item-table">{item.estado}</td>
                   <td className="item-table">
-                    <div className="observacion-style">
+                    <div
+                      onClick={()=> this.obtenerItem(item)}
+                      className="observacion-style"
+                    >
                       <FontAwesomeIcon icon={faClipboard} />
                     </div>
                   </td>
@@ -87,6 +113,21 @@ componentDidMount(){
           }
         </Tabla>
       </div>
+      <Modal
+        show={this.state.estadoModal}
+        className="middle"
+        hideButtonCancel={true}
+        nameButton="Cerrar"
+        onClick={this.cerrarModal}
+      >
+        {
+          <tr>
+            <td className="obs-modal">
+              {this.state.itemObtenido.observaciones}
+            </td>
+          </tr>
+        }
+      </Modal>
     </div>
     )
   }

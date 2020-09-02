@@ -23,3 +23,15 @@
     transition: 0.5s;
   }
 }
+
+
+@media (max-width : 650px) {
+  .master-textarea{
+    margin-top: 40px;
+    margin: 0 auto;
+  }
+  .text-area{
+
+    width: 420px;
+  }
+}

@@ -365,7 +365,7 @@ class obtenerData extends React.Component{
       <div>
         <div>
           <div className="items-configuracion">
-            <div>
+            <div className="container-configuracion">
               <Button 
                 onClick={()=>this.abrirModal('mostrarModalTipo')} 
                 className="config" 
@@ -447,7 +447,7 @@ class obtenerData extends React.Component{
               </Modal>
             </div>
 
-            <div>
+            <div className="container-configuracion">
               <Button onClick={()=>this.abrirModal('mostrarModalRaza')} className="config" name="Crear"/>
               <Tabla cabecera={cabeceraRaza} dates={this.state.dataRaza}>
                 {
@@ -524,7 +524,7 @@ class obtenerData extends React.Component{
           </div>
 
           <div className="items-configuracion">
-            <div>
+            <div className="container-configuracion">
               <Button onClick={() => this.abrirModal('mostrarModalEstado')} className="config" name="Crear"/>
               <Tabla cabecera={cabeceraEstado} dates={this.state.dataEstado}>
                 {
@@ -597,7 +597,7 @@ class obtenerData extends React.Component{
               </Modal>
             </div>
 
-            <div>
+            <div className="container-configuracion">
               <Button onClick={() => this.abrirModal('mostrarModalDoctor')} className="config" name="Crear"/>
               <Tabla cabecera={cabeceraDoctor} dates={this.state.dataDoctor}>
                 {

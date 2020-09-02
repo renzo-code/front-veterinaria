@@ -24,3 +24,10 @@
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
 }
+
+
+@media (max-width: 650px){
+  .master-block{
+    margin: 20px auto;
+  }
+}

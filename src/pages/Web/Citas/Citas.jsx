@@ -6,6 +6,7 @@ import Button from '../../../components/Button/Button'
 import ComboBox from '../../../components/ComboBox/ComboBox'
 import Modal from '../../../components/Modal/Modal'
 import Tabla from '../../../components/Tablas/Tabla'
+import {withRouter} from 'react-router-dom'
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -230,8 +231,12 @@ class Citas extends React.Component {
     this.abrirModal('modalEditarCitas')
   }
 
+  redireccionar = (item) => {
+    this.props.history.push(`/citas/detalle/${item.id_cita}`)
+  }
+
   render(){
-    console.log(this.state.itemEditar,'citaEditada')
+    console.log('props',this.props)
     // console.log(this.state.itemEditar,'obs')
     // console.log(this.state.estadoObtenido,'asd')
     return(
@@ -253,14 +258,6 @@ class Citas extends React.Component {
             placeholder="Seleccione la mascota"
             value={this.state.selectedMascota}
             title="Nombre de la mascota :"
-          />
-          <label className="titulo-fecha-salida">Fecha de Salida</label>
-          <input
-            className="fecha-salida"
-            type="datetime-local" id="start"
-            name="trip-start"
-            min="2019-01-01" max="2022-01-01"
-            value={this.state.fechaSalida}
           />
           <ComboBox
             onChange={this.inputChange}
@@ -304,7 +301,12 @@ class Citas extends React.Component {
                   return(
                     <tr key={i}>
                       <td className="item-table">{item.id_cita}</td>
-                      <td className="item-table">{item.nombre_duenio}</td>
+                      <td
+                        onClick={()=> this.redireccionar(item)}
+                        className="item-table"
+                      >
+                        {item.nombre_duenio}
+                      </td>
                       <td className="item-table">{item.nombre_mascota}</td>
                       <td className="item-table">{item.nombre_doctor}</td>
                       <td className="item-table">{item.fecha_ingreso.substring(0,10)}</td>
@@ -316,7 +318,7 @@ class Citas extends React.Component {
                         >
                         {item.estado}
                       </td>
-                      <td 
+                      <td
                         className="item-table"
                         onClick={()=> this.obtenerItem(item)}
                       >
@@ -411,5 +413,5 @@ class Citas extends React.Component {
   }
 }
 
-export default Citas
+export default withRouter(Citas)
 //dueño, mascota, fecha de ingreso, fecha de salida , doctor , observaciones

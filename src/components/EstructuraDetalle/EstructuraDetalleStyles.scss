@@ -17,3 +17,19 @@
   color: #666666;
   font-size: 23px;
 }
+
+
+@media (max-width : 650px){
+  .detalle{
+    font-size: 16px;
+  }
+  .estructura-title{
+    font-size: 18px;
+  }
+  .estructura-detalle{
+    width: 400px;
+  }
+  .title-estructura-cita{
+    font-size: 30px;
+  }
+}

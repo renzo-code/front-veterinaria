@@ -21,11 +21,6 @@ class Contacto extends React.Component{
     console.log(e.target.value,'input')
   }
 
-  capturarClick = (e) => {
-    console.log(e,'click')
-    alert('hice click')
-  }
-
   crearContacto = async () =>{
     try{
       const nuevoContacto = {

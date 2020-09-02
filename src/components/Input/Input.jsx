@@ -3,7 +3,7 @@ import './InputStyles.scss'
 
 const Input = (props) =>{
   return(
-    <div>
+    <div className="container-input">
       <p className="title">{props.titleInput}</p>
       <input 
         className={`input ${props.className}`}

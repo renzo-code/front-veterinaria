@@ -62,3 +62,26 @@
     transition: 0.3s;
   }
 }
+
+
+@media (max-width: 650px) {
+  .image-cards{
+    height: 250px;
+    width: 250px;
+  }
+  .parrafo-Card{
+    width: 410px;
+    margin: auto;
+  }
+  .fonts{
+    font-size: 20px;
+  }
+  .master-cards{
+    width: 450px;
+    height: 600px;
+    margin: 30px auto;
+
+    // width: 600px;
+    // height: 450px;
+  }
+}

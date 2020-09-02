@@ -146,3 +146,61 @@
   
 }
 
+
+
+
+
+
+
+@media (max-width: 650px){
+  .quienes-somos{
+    display: block;
+  }
+  .title-servicios{
+    font-size: 40px;
+  }
+  .blocks{
+    display: block;
+    margin: auto;
+  }
+  .cards{
+    display: block;
+  }
+  .master-familia{
+    padding-bottom: 50px;
+  }
+  .quienes-somos{
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+  .title-hora{
+    font-size: 42px;
+    letter-spacing: 3px;
+  }
+  .container{
+    padding: 0;
+  }
+  .body-parrafo{
+    font-size: 16px;
+  }
+  .master-servicios{
+    padding-top: 20px;
+  }
+  .body-imagen{
+    width: 395px;
+    height: 350px;
+  }
+  .footer-img{
+    width: 190px;
+    height: 290px;
+    padding-top: 10px;
+  }
+  .footer-title{
+    height: 89px;
+  }
+  .title-la-lealtad{
+    font-size: 25px;
+    width: 200px;
+  }
+}
+

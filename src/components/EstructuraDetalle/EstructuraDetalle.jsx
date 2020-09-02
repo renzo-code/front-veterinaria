@@ -5,7 +5,7 @@ import './EstructuraDetalleStyles.scss'
 const EstructuraDetalle = (props) => {
   return(
     <div className="estructura-detalle">
-      <h2>{props.title}</h2>
+      <h2 className="estructura-title">{props.title}</h2>
       <div>
         <h2 className="detalle">{props.detalle}</h2>
       </div>
