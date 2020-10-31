@@ -21,7 +21,6 @@ const cabeceraHistorial = [
     "Observaciones"
   ]
 
-
 class Historial extends React.Component{
   state={
     dataHistorial : [],

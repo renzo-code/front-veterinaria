@@ -434,7 +434,7 @@ class obtenerData extends React.Component{
                   <div>
                     <h2 className="form-title">CREAR TIPO </h2>
                     <div className="form-input">
-                      <Input 
+                      <Input
                         onChange={this.inputChange} 
                         placeholder="Escribir aquí ..." 
                         titleInput="Tipo de Mascota :"

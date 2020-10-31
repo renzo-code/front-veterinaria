@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 import "./ModalStyles.scss";
 import "../Button/Button"
+
 import Button from "../Button/Button";
 
 const Modal = ({

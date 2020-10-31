@@ -1,6 +1,6 @@
 .image-fondo{
   width: 100%;
-  background-image: url("https://veterinariarondon.com/wp-content/uploads/2018/12/eduardo-rondon-veterinario-lima.jpg");
+  background-image: url("https://instagram.flim22-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/75412686_582291812561257_2011079477446344483_n.jpg?_nc_ht=instagram.flim22-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=2-cpCelFbrkAX-SHqH-&_nc_tp=24&oh=20b40fb0fac32ef95ae19e68f8a9c18f&oe=5FC6B7B1");
   background-position: fixed;
   height: 657px;
   background-size: cover;
@@ -10,7 +10,7 @@
   justify-content: center;
   filter: grayscale(.2);
   // &::before {
-  //   content: '';
+  //   content: '';&
   //   position: absolute;
   //   top: 0;
   //   bottom: 0;
@@ -124,7 +124,6 @@
   justify-content: center;
 }
 
-
 .footer-title{
   display: flex;
   justify-content: space-evenly;
@@ -136,7 +135,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 23px;
   margin-bottom: 50px;
-  margin-top: 200px;
+  margin-top: 50px;
   letter-spacing: 1.5px;
   border-radius: 10px;
 }
