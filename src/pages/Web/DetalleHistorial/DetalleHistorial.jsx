@@ -16,7 +16,7 @@ class DetalleHistorial extends React.Component {
 
   obtenerHistorial = async () => {
     try{
-      const historialObtenido = await Axios.get(`http://localhost:8080/api/v1/historial/${this.props.match.params.id}`)
+      const historialObtenido = await Axios.get(`hhttps://veterinaria-renzo-neira.herokuapp.com/api/v1/historial/${this.props.match.params.id}`)
       console.log('historialObtenido',historialObtenido)
       this.setState({
         dataDetalleHistorial : historialObtenido.data.reply[0]

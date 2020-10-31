@@ -64,7 +64,7 @@ class obtenerData extends React.Component{
   }
   obtenerTipo = async () =>{
     try{
-      const tipo = await Axios.get('http://localhost:8080/api/v1/tipo')
+      const tipo = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/tipo')
       // console.log(tipo.data.reply,'resp')
       this.formatearData(tipo,'id_tipo','dataTipo')
 
@@ -90,7 +90,7 @@ class obtenerData extends React.Component{
   
   obtenerRaza = async () =>{
     try{
-      const raza = await Axios.get('http://localhost:8080/api/v1/raza')
+      const raza = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/raza')
       this.formatearData(raza,'id_raza','dataRaza')
       // console.log(raza,'raza otros')
     }
@@ -101,7 +101,7 @@ class obtenerData extends React.Component{
   
   obtenerEstado = async () =>{
     try{
-      const estado = await Axios.get('http://localhost:8080/api/v1/estado')
+      const estado = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/estado')
       this.formatearData(estado,'id_estado','dataEstado')
       // console.log(estado,'estado')
     }
@@ -112,7 +112,7 @@ class obtenerData extends React.Component{
   
   obtenerDoctor = async () =>{
     try{
-      const doctor = await Axios.get(`http://localhost:8080/api/v1/doctor`)
+      const doctor = await Axios.get(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/doctor`)
       this.formatearData(doctor,'id_doctor','dataDoctor','nombres_apellidos')
       console.log(doctor,'doc')
     }
@@ -144,7 +144,7 @@ class obtenerData extends React.Component{
       const nuevoTipo = {
         "tipo" : this.state.tipo
       }
-      const datosAlServicioTipo = await Axios.post('http://localhost:8080/api/v1/tipo', nuevoTipo)
+      const datosAlServicioTipo = await Axios.post('https://veterinaria-renzo-neira.herokuapp.com/api/v1/tipo', nuevoTipo)
       console.log(datosAlServicioTipo, 'datos')
     }
     catch(e){
@@ -163,7 +163,7 @@ class obtenerData extends React.Component{
 
   eliminarTipo = async (id) =>{
     try{
-      const deleteTipo = await Axios.delete(`http://localhost:8080/api/v1/tipo/${id}` )
+      const deleteTipo = await Axios.delete(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/tipo/${id}` )
       console.log(deleteTipo, 'delete tipo')
       
     }
@@ -178,7 +178,7 @@ class obtenerData extends React.Component{
       const nuevaRaza = {
         "raza": this.state.raza
       }
-      const DatosAlServicioRaza = await Axios.post(`http://localhost:8080/api/v1/raza`, nuevaRaza)
+      const DatosAlServicioRaza = await Axios.post(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/raza`, nuevaRaza)
       console.log(DatosAlServicioRaza,'DatosAlServicioRaza')
     }
     catch(e){
@@ -191,7 +191,7 @@ class obtenerData extends React.Component{
   
   eliminarRaza = async (idRaza) =>{
     try{
-      const deleteRaza = await Axios.delete(`http://localhost:8080/api/v1/raza/${idRaza}`)
+      const deleteRaza = await Axios.delete(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/raza/${idRaza}`)
       console.log(deleteRaza,'deleteRaza')
     }
     catch(e){
@@ -205,7 +205,7 @@ class obtenerData extends React.Component{
       const nuevoEstado= {
         "estado": this.state.estado
       }
-    const DatosAlServicioEstado = await Axios.post('http://localhost:8080/api/v1/estado', nuevoEstado)
+    const DatosAlServicioEstado = await Axios.post('https://veterinaria-renzo-neira.herokuapp.com/api/v1/estado', nuevoEstado)
     console.log(DatosAlServicioEstado,'DatosAlServicioEstado')
   }
   catch(e){
@@ -218,7 +218,7 @@ class obtenerData extends React.Component{
 
   eliminarEstado = async (idEstado) =>{
     try{
-      const deleteEstado = await Axios.delete(`http://localhost:8080/api/v1/estado/${idEstado}`)
+      const deleteEstado = await Axios.delete(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/estado/${idEstado}`)
       console.log(deleteEstado,'deleteEstado')
     }
     catch(e){
@@ -233,7 +233,7 @@ class obtenerData extends React.Component{
       const nuevoDoctor = {
         "nombresApellidos": this.state.doctor
       }
-      const datosAlServicioDoctor = await Axios.post('http://localhost:8080/api/v1/doctor', nuevoDoctor)
+      const datosAlServicioDoctor = await Axios.post('https://veterinaria-renzo-neira.herokuapp.com/api/v1/doctor', nuevoDoctor)
       console.log(datosAlServicioDoctor,'datosAlServicioDoctor')
     }
     catch(e){
@@ -246,7 +246,7 @@ class obtenerData extends React.Component{
 
   eliminarDoctor = async (idDoctor) => {
     try{
-      const deleteDoctor = await Axios.delete(`http://localhost:8080/api/v1/doctor/${idDoctor}`)
+      const deleteDoctor = await Axios.delete(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/doctor/${idDoctor}`)
       console.log(deleteDoctor,'deleteDoctor')
     }
     catch(e){
@@ -261,7 +261,7 @@ class obtenerData extends React.Component{
         "tipo" : this.state.itemEditar.description,
         "idTipo": this.state.itemEditar.id
       }
-      const tipoEditado = await Axios.put(`http://localhost:8080/api/v1/tipo`, modificarTipo)
+      const tipoEditado = await Axios.put(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/tipo`, modificarTipo)
       console.log(tipoEditado,'tipoEditado')
     }
     catch(e){
@@ -291,7 +291,7 @@ class obtenerData extends React.Component{
         "raza" : this.state.itemEditar.description,
         "idRaza": this.state.itemEditar.id
       }
-      const razaEditada = await Axios.put(`http://localhost:8080/api/v1/raza`, modificarRaza)
+      const razaEditada = await Axios.put(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/raza`, modificarRaza)
       console.log(razaEditada,'razaEditada')
     }
     catch(e){
@@ -314,7 +314,7 @@ class obtenerData extends React.Component{
         "estado": this.state.itemEditar.description,
         "idEstado": this.state.itemEditar.id
       }
-      const estadoEditado = await Axios.put('http://localhost:8080/api/v1/estado', modificarEstado)
+      const estadoEditado = await Axios.put('https://veterinaria-renzo-neira.herokuapp.com/api/v1/estado', modificarEstado)
       console.log(estadoEditado,'estadoEditado')
     }
     catch(e){
@@ -337,7 +337,7 @@ class obtenerData extends React.Component{
         "doctor" : this.state.itemEditar.description,
         "idDoctor" : this.state.itemEditar.id
       }
-      const doctorEditado = await Axios.put('http://localhost:8080/api/v1/doctor', modificarDoctor)
+      const doctorEditado = await Axios.put('https://veterinaria-renzo-neira.herokuapp.com/api/v1/doctor', modificarDoctor)
       console.log(doctorEditado,'doctorEditado')
     }
     catch(e){

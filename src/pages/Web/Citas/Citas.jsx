@@ -86,7 +86,7 @@ class Citas extends React.Component {
 
   obtenerDuenio = async () =>{
     try{
-      const duenioObtenido = await Axios.get('http://localhost:8080/api/v1/duenio')
+      const duenioObtenido = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/duenio')
       console.log(duenioObtenido,'duenioObtenido')
       this.formatearData(duenioObtenido, 'id_duenio','datosDuenio' ,'nombres_apellidos')
     }
@@ -97,7 +97,7 @@ class Citas extends React.Component {
 
   obtenerMascota = async () => {
     try{
-      const mascotaObtenida = await Axios.get('http://localhost:8080/api/v1/mascota')
+      const mascotaObtenida = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/mascota')
       console.log(mascotaObtenida,'mascotaObtenida')
       this.formatearData(mascotaObtenida,'id_mascota','datosMascota','nombre')
     }
@@ -108,7 +108,7 @@ class Citas extends React.Component {
 
   obtenerDoctor = async () => {
     try{
-      const doctorObtenido = await Axios.get('http://localhost:8080/api/v1/doctor')
+      const doctorObtenido = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/doctor')
       console.log(doctorObtenido,'doctorObtenido')
       this.formatearData(doctorObtenido, 'id_doctor', 'datosDoctor', 'nombres_apellidos')
     }
@@ -119,7 +119,7 @@ class Citas extends React.Component {
 
   obtenerEstado = async () => {
     try{
-      const estadoObtenido = await Axios.get('http://localhost:8080/api/v1/estado')
+      const estadoObtenido = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/estado')
       console.log(estadoObtenido,'estadoObtenido')
       this.formatearData(estadoObtenido,'id_estado', 'datosEstado')
     }
@@ -144,7 +144,7 @@ class Citas extends React.Component {
         "observaciones" : observaciones,
         "idEstado" : parseInt(selectedEstado)
       }
-      const citaCreada = await Axios.post(`http://localhost:8080/api/v1/cita`, nuevaCita)
+      const citaCreada = await Axios.post(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/cita`, nuevaCita)
       console.log(citaCreada, 'citaCreada')
     }
     catch(e){
@@ -177,7 +177,7 @@ class Citas extends React.Component {
 
   obtenerCitas = async () => {
     try{
-      const citasObtenidas = await Axios.get(`http://localhost:8080/api/v1/cita`)
+      const citasObtenidas = await Axios.get(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/cita`)
       console.log(citasObtenidas,'citasObtenidas')
       this.setState({
         datosCitas : citasObtenidas.data.reply
@@ -215,7 +215,7 @@ class Citas extends React.Component {
         "fechaSalida" : fecha_salida,
         "horaSalida" : hora_salida,
       }
-      const citaEditada = await Axios.put(`http://localhost:8080/api/v1/cita`, modificarCita)
+      const citaEditada = await Axios.put(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/cita`, modificarCita)
       console.log(citaEditada,'citaEditada')
     }
     catch(e){
