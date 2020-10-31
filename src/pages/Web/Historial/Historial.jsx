@@ -32,7 +32,7 @@ componentDidMount(){
 
   obtenerHistorial = async () => {
     try{
-      const historialObtenido = await Axios.get('http://localhost:8080/api/v1/historial')
+      const historialObtenido = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/historial')
       this.setState({
         dataHistorial : historialObtenido.data.reply
       })

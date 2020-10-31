@@ -37,7 +37,7 @@ componentDidMount(){
 
   obtenerdataTipo = async () => {
     try{
-      const dataTipo = await Axios.get('http://localhost:8080/api/v1/tipo')
+      const dataTipo = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/tipo')
       console.log(dataTipo,'dataTipo')
       this.formatearData(dataTipo, 'id_tipo','servicioTipo')
     }
@@ -48,7 +48,7 @@ componentDidMount(){
 
   obtenerDataRaza = async () =>{
   try{
-      const dataRaza = await Axios.get('http://localhost:8080/api/v1/raza')
+      const dataRaza = await Axios.get('https://veterinaria-renzo-neira.herokuapp.com/api/v1/raza')
       console.log(dataRaza,'dataRaza')
       this.formatearData(dataRaza,'id_raza','servicioRaza')
     }
@@ -99,7 +99,7 @@ componentDidMount(){
         "telefono" : this.state.telefono,
         "direccion" : this.state.direccion
         }
-      const duenioCreado = await Axios.post(`http://localhost:8080/api/v1/duenio`,nuevoDuenio)
+      const duenioCreado = await Axios.post(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/duenio`,nuevoDuenio)
       console.log(duenioCreado,'nuevoDuenio')
     }
     catch(e){
@@ -112,7 +112,7 @@ componentDidMount(){
 
   obtenerDuenio = async () =>{
     try{
-      const duenioObtenido = await Axios.get(`http://localhost:8080/api/v1/duenio`)
+      const duenioObtenido = await Axios.get(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/duenio`)
       console.log(duenioObtenido,'duenioObtenido')
       this.formatearData(duenioObtenido,'id_duenio','servicioDuenio','nombres_apellidos')
       }
@@ -129,7 +129,7 @@ crearMascota = async () =>{
       "raza": parseInt(this.state.selectedRaza),
       "tipo": parseInt(this.state.selectedTipo) 
       }
-    const mascotaCreada = await Axios.post(`http://localhost:8080/api/v1/mascota`, nuevaMascota)
+    const mascotaCreada = await Axios.post(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/mascota`, nuevaMascota)
     console.log('mascotaCreada',mascotaCreada)
   }
   catch(e){

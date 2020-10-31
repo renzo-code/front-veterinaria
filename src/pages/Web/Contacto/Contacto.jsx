@@ -34,7 +34,7 @@ class Contacto extends React.Component{
         "asunto" : this.state.datosInputAsunto,
         "descripcion" : this.state.datosTextArea
       }
-      const contactoCreado = await Axios.post(`http://localhost:8080/api/v1/contacto`, nuevoContacto)
+      const contactoCreado = await Axios.post(`https://veterinaria-renzo-neira.herokuapp.com/api/v1/contacto`, nuevoContacto)
       console.log(contactoCreado,'contactoCreado')
     }
     catch(e){
